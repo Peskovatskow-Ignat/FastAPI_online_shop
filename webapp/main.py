@@ -21,7 +21,7 @@ def setup_routers(app: FastAPI) -> None:
 @asynccontextmanager
 async def lifespan(app: FastAPI) -> AsyncIterator[None]:
     await migrate()
-    await load_data(['fixture/shop/shop.user.json'])
+    await load_data(['fixture/shop/shop.user.json', 'fixture/shop/shop.product.json'])
     await start_redis()
 
     yield
