@@ -1,0 +1,3 @@
+CREATE SCHEMA shop;
+
+-- CREATE USER sirius WITH PASSWORD 'qwerty';
