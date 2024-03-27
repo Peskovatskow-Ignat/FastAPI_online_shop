@@ -17,7 +17,7 @@ from webapp.schema.shop.product import ProductResp
 async def get_user_product(
     access_token: Annotated[OAuth2PasswordRequestForm, Depends(oauth2_scheme)],
     session: AsyncSession = Depends(get_session),
-):
+) -> List[ProductResp]:
     user_id = get_user_id(access_token)
 
     product = await get_products_by_user(session, user_id)
@@ -26,8 +26,7 @@ async def get_user_product(
 
 
 @product_router.get('s', status_code=status.HTTP_200_OK, response_model=List[ProductResp])
-async def get_products(session: AsyncSession = Depends(get_session)):
-
+async def get_products(session: AsyncSession = Depends(get_session)) -> List[ProductResp]:
     products = await get_all_product(session)
 
     return parse_obj_as(List[ProductResp], products)
@@ -37,7 +36,7 @@ async def get_products(session: AsyncSession = Depends(get_session)):
 async def get_product(
     product_id: int,
     session: AsyncSession = Depends(get_session),
-):
+) -> ProductResp:
 
     product = await get_product_by_id(session, product_id)
 

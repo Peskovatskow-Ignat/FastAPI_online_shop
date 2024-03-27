@@ -17,7 +17,7 @@ from webapp.schema.shop.user import UserResp
 async def get_user(
     access_token: Annotated[OAuth2PasswordRequestForm, Depends(oauth2_scheme)],
     session: AsyncSession = Depends(get_session),
-):
+) -> UserResp:
     user_id = get_user_id(access_token)
     user = await get_user_by_id(session, user_id)
 

@@ -16,7 +16,7 @@ from webapp.integrations.postgres import get_session
 async def delete_user(
     access_token: Annotated[OAuth2PasswordRequestForm, Depends(oauth2_scheme)],
     session: AsyncSession = Depends(get_session),
-) -> Response:
+) -> Response | status.HTTP_204_NO_CONTENT:
     user_id = get_user_id(access_token)
     user = await delete_user_by_id(session, user_id)
 

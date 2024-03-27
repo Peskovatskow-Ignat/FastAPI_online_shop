@@ -1,4 +1,4 @@
-from typing import Annotated, Any
+from typing import Annotated
 
 from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
@@ -17,7 +17,7 @@ async def create(
     body: UserData,
     access_token: Annotated[OAuth2PasswordRequestForm, Depends(oauth2_scheme)],
     session: AsyncSession = Depends(get_session),
-) -> dict[str, Any]:
+) -> UserResp:
     try:
         user = await create_user(session, body)
     except Exception:

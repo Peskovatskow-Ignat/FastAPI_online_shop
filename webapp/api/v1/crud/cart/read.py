@@ -18,7 +18,7 @@ from webapp.schema.shop.cart import CartItem
 async def get_user_product(
     access_token: Annotated[OAuth2PasswordRequestForm, Depends(oauth2_scheme)],
     session: AsyncSession = Depends(get_session),
-):
+) -> List[CartItem]:
 
     user_id = get_user_id(access_token)
     products = await redis_get(user_id)
