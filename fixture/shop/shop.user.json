@@ -4,5 +4,23 @@
     "username": "user",
     "password": "d8578edf8458ce06fbc5bb76a58c5ca4",
     "roll": "seller"
-  }
+  },
+  {
+    "email": "example1@gmail.com",
+    "username": "user1",
+    "password": "5f4dcc3b5aa765d61d8327deb882cf99",
+    "roll": "seller"
+  },
+  {
+    "email": "example3@gmail.com",
+    "username": "user3",
+    "password": "e10adc3949ba59abbe56e057f20f883e",
+    "roll": "seller"
+  },
+  {
+    "email": "example5@gmail.com",
+    "username": "user5",
+    "password": "1c383cd30b7c298ab50293adfecb7b18",
+    "roll": "seller"
+  }  
 ]

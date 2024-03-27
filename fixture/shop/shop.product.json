@@ -1,0 +1,28 @@
+[
+    {
+        "title": "Телевизор",
+        "descriptions": "Большой смарт Телевизор",
+        "price": 2499.99,
+        "photo": "/templates/image/1.png",
+        "category": "electronic",
+        "user_id": 4
+    },
+    {
+        "title": "Наушники",
+        "descriptions": "Беспроводные наушники с отличным звуком",
+        "price": 149.99,
+        "photo": "/templates/image/2.png",
+        "category": "electronic",
+        "user_id": 2
+    },
+    
+    {
+        "title": "Умные часы",
+        "descriptions": "Умные часы с мониторингом здоровья",
+        "price": 199.99,
+        "photo": "/templates/image/5.png",
+        "category": "electronic",
+        "user_id": 1
+    }
+    
+]
