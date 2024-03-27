@@ -17,7 +17,7 @@
 
 # Run
   
-    git clone https://github.com/kirillsev1/FastAPI_resize_img.git
+    git clone https://github.com/https://github.com/Peskovatskow-Ignat/FastAPI_online_shop.git
     
     cd FastAPI_online_shop
 
